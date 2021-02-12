@@ -1,3 +1,4 @@
+<section id="member-<%= member_counter%>">
 Name: <%= member.name%><br>
 
 <% if member.photo %>
@@ -12,3 +13,4 @@ Allies: <% member.allies.each do |ally| %>
 Enemies: <% member.enemies.each do |enemy| %>
   <%= enemy%><br>
 <% end%>
+</section>
