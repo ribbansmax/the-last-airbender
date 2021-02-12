@@ -5,6 +5,10 @@ class AirbenderApiService
       parse(response).count
     end
 
+    def members(nation)
+      response = Faraday.new("https://last-airbender-api.herokuapp.com/api/v1/characters/?affiliation=Fire+Nation&perPage=25").get
+      parse(response)
+    end
     private
 
     def parse(arg)

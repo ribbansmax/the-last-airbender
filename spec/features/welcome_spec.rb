@@ -22,4 +22,14 @@ RSpec.describe 'When I visit welcome page' do
 
     expect(page).to have_content("Total members: #{members}")
   end
+
+  it 'should display the first 25 members' do
+    visit root_path
+    
+    select "Fire Nation", :from => "nation"
+
+    click_button 'Search For Members'
+
+    
+  end
 end
