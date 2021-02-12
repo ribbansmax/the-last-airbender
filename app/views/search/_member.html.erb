@@ -1,7 +1,7 @@
 <section id="member-<%= member_counter%>">
 Name: <%= member.name%><br>
 
-<% if member.photo %>
+<% if member.photo != nil %>
   <img src="<%= member.photo%>" alt="Image not available"> 
   </img>
 <% end%>
