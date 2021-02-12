@@ -30,6 +30,6 @@ RSpec.describe 'When I visit welcome page' do
 
     click_button 'Search For Members'
 
-    
+    expect(page).to have_content("Fire Nation company leader")
   end
 end

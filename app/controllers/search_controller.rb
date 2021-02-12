@@ -2,10 +2,9 @@ class SearchController < ApplicationController
   def index
     nation = params[:nation]
     @number = AirbenderApiService.number(nation)
+    @members = []
     AirbenderApiService.members(nation).each do |member|
-      Character.new(member)
+      @members << Character.new(member)
     end
-    @members = Character.all
-    binding.pry
   end
 end
