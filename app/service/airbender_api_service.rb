@@ -6,7 +6,9 @@ class AirbenderApiService
     end
 
     def members(nation)
-      response = Faraday.new("https://last-airbender-api.herokuapp.com/api/v1/characters/?affiliation=Fire+Nation&perPage=25").get
+      response = Faraday.new("https://last-airbender-api.herokuapp.com/api/v1/characters/?affiliation=Fire+Nation").get do |req|
+        req.params['perPage'] = "25"
+      end
       parse(response)
     end
     private
