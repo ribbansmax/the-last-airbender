@@ -31,5 +31,9 @@ RSpec.describe 'When I visit welcome page' do
     click_button 'Search For Members'
 
     expect(page).to have_content("Fire Nation company leader")
+    expect(page).to have_content("Affiliation: Fire Nation Fire Nation Royal Family")
+    expect(page).to have_content("Enemies: Combustion Man")
+    expect(page).to have_content("Azula's team (formerly) Dai Li (formerly) Fire Nation Fire Nation Royal Family Fire Warriors Royal Fire Academy for Girls (formerly)")
+
   end
 end
